@@ -11,5 +11,5 @@ def studentinfo(request):
 
 
 def showFormData(request):
-    fn=forms.StudentRgistration(auto_id='some_%s') #prepend some with field name
+    fn=forms.StudentRgistration(auto_id=True) #id will get same name as field name
     return render(request,'enroll/userregistration.html',{'form':fn})
