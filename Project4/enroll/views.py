@@ -9,6 +9,7 @@ def studentinfo(request):
     print('myOutput :',stud);
     return render(request,'enroll/stu_info.html',{'stu':stud})
 
+
 def showFormData(request):
     fn=forms.StudentRgistration(auto_id='some_%s') #prepend some with field name
     return render(request,'enroll/userregistration.html',{'form':fn})
