@@ -11,8 +11,5 @@ def studentinfo(request):
 
 
 def showFormData(request):
-    fn=forms.StudentRgistration(auto_id=True) #id will get same name as field name,label value also changes with it
-    #auto id=string not follow by any %s will be consider true 
-    #auto id=False->label tag,id attribute is not available
-    #by default is is 'id_fieldName'
+    fn=forms.StudentRgistration(auto_id=True,label_suffix='-')# ''will remove the : after name label for and -,:- we can replace is accordingly followed by anychar
     return render(request,'enroll/userregistration.html',{'form':fn})
