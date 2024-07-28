@@ -13,4 +13,7 @@ def studentinfo(request):
 def showFormData(request):
     fn=forms.StudentRgistration(auto_id=True,label_suffix=' ',initial ={'name':'Sonam','email':'abc@gmail.com'})
     #name , email above are fied name initial is used to dynamical initalize field input value
+
+    #order th field
+    fn.order_fields(field_order=['email','name','first_name'])# by defult it is set to none and takes list with order field you want
     return render(request,'enroll/userregistration.html',{'form':fn})
