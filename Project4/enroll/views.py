@@ -11,5 +11,6 @@ def studentinfo(request):
 
 
 def showFormData(request):
-    fn=forms.StudentRgistration(auto_id=True,label_suffix='-')# ''will remove the : after name label for and -,:- we can replace is accordingly followed by anychar
+    fn=forms.StudentRgistration(auto_id=True,label_suffix=' ',initial ={'name':'Sonam','email':'abc@gmail.com'})
+    #name , email above are fied name initial is used to dynamical initalize field input value
     return render(request,'enroll/userregistration.html',{'form':fn})
