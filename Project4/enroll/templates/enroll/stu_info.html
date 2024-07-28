@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student page</title>
+    <style>
+        th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>student page</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>StuId</th>
+                <th>Name</th>
+                <th>Emai</th>
+                <th>Password</th>
+                <th>Comment</th>
+            </tr>
+            {% if stu %}
+                <tr>
+                    <td>{{stu.id}}</td>
+                    <td>{{stu.studid}}</td>
+                    <td>{{stu.studname}}</td>
+                    <td>{{stu.studemail}}</td>
+                    <td>{{stu.studpass}}</td>
+                    <td>{{stu.comment}}</td>
+                </tr>
+            {% else %}
+                <h1>No Data</h1>
+            {% endif %}
+            
+        </table>
+    
+    
+</body>
+</html>
