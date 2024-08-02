@@ -20,8 +20,15 @@
     <div>
         {{form.name.label_tag}}
         {{form.name}}
+        <br>
         {{form.name.label}}
+        <br>
         {{form.name.value}}
+        <br>
+        {{form.name.html_name}}
+        {% comment %} value inside name field of form {% endcomment %}
+        {{form.name.help_text}} <br>
+        {{form.name.field.required}}
     </div>
 </body>
 </html>
